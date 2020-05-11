@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+	<id>web</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<fileSets>
+		<fileSet>
+			<directory>${project.build.directory}/web</directory>
+			<outputDirectory></outputDirectory>
+		</fileSet>
+                <fileSet>
+                        <directory>${basedir}/runtime-resources</directory>
+                        <outputDirectory></outputDirectory>
+                </fileSet>
+		<fileSet>
+			<directory>${basedir}</directory>
+			<outputDirectory></outputDirectory>
+			<excludes>
+				<exclude>runtime-resources/**/*</exclude>
+				<exclude>build-resources/**/*</exclude>
+				<exclude>*.md</exclude>
+				<exclude>pom.xml</exclude>
+				<exclude>target/**/*</exclude>
+				<exclude>.*</exclude>
+			</excludes>
+		</fileSet>
+                <fileSet>
+                        <directory>${project.build.directory}/alfresco-training-markdown-common/runtime</directory>
+                        <outputDirectory></outputDirectory>
+                </fileSet>
+	</fileSets>
+</assembly>
+
