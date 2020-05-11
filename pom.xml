@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.alfresco.training.courses</groupId>
+	<artifactId>course-acs-using-share-search</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>com.alfresco.training</groupId>
+		<artifactId>alfresco-training-course-parent</artifactId>
+		<version>[2.0.0,2.1.0)</version>
+	</parent>
+
+	<properties>
+		<!-- These 'course' properties are injected into certain pages -->
+		<course.estimatedTimeMinutes>30</course.estimatedTimeMinutes>
+		<course.difficulty>Foundation</course.difficulty>
+		<course.version.earliest>Alfresco Content Services v4.0</course.version.earliest>
+		<course.version.latest>Latest</course.version.latest>
+		<course.version.dev>Alfresco Content Services v6.2</course.version.dev>
+		<course.buildDate>${maven.build.timestamp}</course.buildDate>
+
+        	<!-- The following properties are defaulted by the parent POM -->
+		<!--
+		<git.repo.baseUrl>https://api.github.com</git.repo.baseUrl>
+		<git.repo.basePath>AlfrescoTraining</git.repo.basePath>
+		<git.repo.path></git.repo.path>
+		-->
+	</properties>
+
+	<modules>
+		<!-- Introduction -->
+		<module>lessons/intro-objectives</module>
+		<module>lessons/intro-prerequisites</module>
+
+
+		<!-- Summary -->
+		<module>lessons/summary-review</module>
+		<module>lessons/summary-references</module>
+		<module>lessons/summary-next</module>
+
+		<!-- Others -->
+		<module>about-course</module>
+	</modules>
+
+	<repositories>
+		<repository>
+			<id>alfresco-training</id>
+			<url>https://artifacts.alfresco.com/nexus/content/repositories/training-release</url>
+		</repository>
+	</repositories>
+
+</project>
